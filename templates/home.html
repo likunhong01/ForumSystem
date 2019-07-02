@@ -7,28 +7,28 @@
 
     <!-- 样式-->
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css"/>
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css"/>
+    <link rel="stylesheet" href="/static/css/flexslider.css"/>
+    <link rel="stylesheet" href="/static/css/custom-styles.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="css/style-ie.css"/>
     <![endif]-->
 
     <!-- Favicons图标 -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png">
 
     <!-- js -->
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/jquery.custom.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/jquery.flexslider.js"></script>
+    <script src="/static/js/jquery.custom.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -74,7 +74,7 @@
 </head>
 
 <body class="home">
-<!-- Color Bars (above header)-->
+<!-- 最上方两个条子 -->
 <div class="color-bar-1"></div>
 <div class="color-bar-2 color-bg"></div>
 
@@ -82,25 +82,14 @@
 <div class="container">
 
     <!-- logo，搜索框，导航栏 -->
-    <div class="row header"><!-- Begin Header -->
+    <div class="row header">
 
-        <!-- 左上角图片和logo
-        ================================================== -->
+        <!-- 左上角图片和logo -->
         <div class="span5 logo" style="width: 250px">
-            <!--            <a href="index.htm"><img src="img/piccolo-logo.png" alt=""/></a>-->
             <h5 style="font-size: 28px">一 个 论 坛</h5>
         </div>
 
-<!--        &lt;!&ndash;        搜索框&ndash;&gt;-->
-<!--        <form style="margin-left: 0; width: 350px;" class="span5 logo navbar-form navbar-left">-->
-<!--            <div style="float: left;" class="form-group">-->
-<!--                <input type="text" class="form-control" placeholder="请输入搜索内容">-->
-<!--            </div>-->
-<!--            <button style="margin-top: 4px; margin-left: 10px" type="submit" class="btn btn-default">搜索</button>-->
-<!--        </form>-->
-
-        <!-- 导航栏
-        ================================================== -->
+        <!-- 导航栏 -->
         <div class="span7 navigation">
             <div class="navbar hidden-phone">
 
@@ -109,29 +98,28 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="home.html">主页 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="home.html">全显示</a></li>
-                            <li><a href="index-gallery.htm">只显示帖子列表</a></li>
-                            <li><a href="index-slider.htm">只显示推荐帖子TOP 10</a></li>
+                            <li><a href="/home">全显示</a></li>
+                            <li><a href="#">只显示帖子列表</a></li>
+                            <li><a href="#">只显示推荐帖子TOP 10</a></li>
                         </ul>
                     </li>
-                    <li><a href="features.htm">选项1</a></li>
+                    <li><a href="#">选项1</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">页面 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="page-full-width.htm">全显示</a></li>
-                            <li><a href="page-right-sidebar.htm">显示右边</a></li>
-                            <li><a href="page-left-sidebar.htm">显示左边</a></li>
-                            <li><a href="page-double-sidebar.htm">显示两条</a></li>
+                            <li><a href="#">全显示</a></li>
+                            <li><a href="#">显示右边</a></li>
+                            <li><a href="#">显示左边</a></li>
+                            <li><a href="#">显示两条</a></li>
                         </ul>
                     </li>
-                    <li><a href="page-contact.htm">联系我们</a></li>
+                    <li><a href="#">联系我们</a></li>
                 </ul>
 
             </div>
 
-            <!-- Mobile Nav
-            ================================================== -->
+            <!-- 移动端导航 -->
             <form action="#" id="mobile-nav" class="visible-phone">
                 <div class="mobile-nav-select">
                     <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
@@ -156,22 +144,25 @@
     </div>
     <!-- 3个结束 -->
 
-    <!-- top 10, 介绍 -->
+    <!-- top 10公告, 介绍 -->
     <div class="row headline">
 
-        <!-- top 10 -->
+        <!-- top 10公告 -->
         <div class="span8">
-            <h3 style="margin-top: -40px;"> &nbsp;&nbsp;TOP 10<br/></h3>
-            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>
-            <a class="top10">第二名</a>
-            <a class="top10">第三名</a>
-            <a class="top10">第四名</a>
-            <a class="top10">第五名</a>
-            <a class="top10">第六名</a>
-            <a class="top10">第七名</a>
-            <a class="top10">第八名</a>
-            <a class="top10">第九名</a>
-            <a class="top10">第十名</a>
+            <h3 style="margin-top: -40px;"> &nbsp;&nbsp;TOP 10 公告<br/></h3>
+            {% for a in a_list %}
+                <a class="top10">{{ a.a_title }}</a>
+            {% endfor %}
+{#            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>#}
+{#            <a class="top10">第二名</a>#}
+{#            <a class="top10">第三名</a>#}
+{#            <a class="top10">第四名</a>#}
+{#            <a class="top10">第五名</a>#}
+{#            <a class="top10">第六名</a>#}
+{#            <a class="top10">第七名</a>#}
+{#            <a class="top10">第八名</a>#}
+{#            <a class="top10">第九名</a>#}
+{#            <a class="top10">第十名</a>#}
         </div>
 
         <!-- 指导 -->
@@ -198,108 +189,122 @@
                 <ul class="gallery-post-grid holder">
 
                     <!-- 1 -->
-                    <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">第一个帖子</a>第一个帖子简介</span>
-                    </li>
+                    {% for t in r_list %}
+                        <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="/static/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+                        <a href="single.html"><img src="{{ t.t_photo }}" alt="Gallery"></a>
+                        <span class="project-details"><a href="single.html">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
+                        </li>
+                    {% endfor %}
 
-                    <!-- 2 -->
-                    <li class="span3 gallery-item" data-id="id-2" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 3 -->
-                    <li class="span3 gallery-item" data-id="id-3" data-type="web">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 4 -->
-                    <li class="span3 gallery-item" data-id="id-4" data-type="video">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 5 -->
-                    <li class="span3 gallery-item" data-id="id-5" data-type="web illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 6 -->
-                    <li class="span3 gallery-item" data-id="id-6" data-type="illustration design">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 7 -->
-                    <li class="span3 gallery-item" data-id="id-7" data-type="design">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
-
-                    <!-- 8 -->
-                    <li class="span3 gallery-item" data-id="id-8" data-type="web video">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"
-                                   title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="single.html" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>
-                    </li>
+{#                    <li class="span3 gallery-item" data-id="id-1" data-type="illustration">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">第一个帖子</a>第一个帖子简介</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 2 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-2" data-type="illustration">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 3 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-3" data-type="web">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="#" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 4 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-4" data-type="video">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 5 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-5" data-type="web illustration">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 6 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-6" data-type="illustration design">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 7 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-7" data-type="design">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
+{##}
+{#                    <!-- 8 -->#}
+{#                    <li class="span3 gallery-item" data-id="id-8" data-type="web video">#}
+{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
+{#                            <span class="gallery-icons">#}
+{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
+{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
+{#                                <a href="single.html" class="item-details-link"></a>#}
+{#                            </span>#}
+{#                        </span>#}
+{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
+{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
+{#                    </li>#}
                 </ul>
             </div>
         </div>

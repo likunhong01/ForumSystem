@@ -9,34 +9,41 @@ def home(request):
     if request.method == 'GET':
         response = {}
 
-        # top 10（公告）的处理
-        announcements = models.Announcement.objects.all()[-10:0]
+        # top 10（公告）的处理，筛选10个也要改
+        announcements = models.Announcement.objects.filter()
         # 把这10个公告封装成字典
         a_list = []
         for a in announcements:
-            dic = {'a_id': a.a_id, 'a_title': a.a_title, 'a_content': a.a_content}
+            dic = {'a_id': a.a_id, 'a_title': a.a_title}
             a_list.append(dic)
         # 把列表装进回复字典里
         response['a_list'] = a_list
 
-        # 帖子推荐列表，推荐8个帖子
-        recommends = models.Topic.objects.filter(recommend=True)[-8:0]
-        pass
+        # 帖子推荐列表，推荐8个帖子，推荐8个要改
+        recommends = models.Topic.objects.filter(recommend=True)
+        # 推荐列表
+        r_list = []
+        for t in recommends:
+            dic = {'t_id': t.t_id, 't_title': t.t_title, 't_introduce': t.t_introduce, 't_photo': t.t_photo}
+            r_list.append(dic)
+        # 把列表装进response
+        response['r_list'] = r_list
 
-    return render(request, 'home.html')
+        return render(request, 'home.html', **response)
 
 
 def all_tie(request):
     if request.method == 'GET':
         # 默认时间排序把帖子传过去
+        topics = models.Topic.objects.filter()
+        return render(request, 'all.html', {'topics': topics})
 
-        pass
     elif request.method == 'POST':
         # 搜索接收一个字段，查询标题或者简介里有关键字的帖子
-
-        pass
-
-    return render(request, 'all.html')
+        keys = request.POST.get('keys')
+        # 按关键字查询标题里含有关键字的
+        topics = models.Topic.objects.filter(t_title__icontains=keys)
+        return render(request, 'all.html', {'topics': topics})
 
 
 def login(request):

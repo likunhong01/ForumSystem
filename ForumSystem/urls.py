@@ -21,7 +21,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^all/', views.all_tie),  # 全部帖子
-    url(r'^(?P<uid>\d+)/home', views.home),  # 主页
+    url(r'^home/', views.home),  # 主页
     url(r'^login/', views.login),  # 登录注册
     url(r'^publish/', views.publish),  # 发布帖子
     url(r'^(?P<tid>\d+)/single', views.single),  # 单个帖子
