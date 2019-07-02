@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>论坛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 样式-->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+<!--    <link rel="stylesheet" href="css/bootstrap-responsive.css">-->
+<!--    <link rel="stylesheet" href="css/prettyPhoto.css"/>-->
+<!--    <link rel="stylesheet" href="css/flexslider.css"/>-->
+    <link rel="stylesheet" href="css/custom-styles.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+    <![endif]-->
+
+    <!-- Favicons图标 -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery.custom.js"></script>
+    <!--    <script type="text/javascript">-->
+    <!--        $(document).ready(function () {-->
+
+    <!--            $("#btn-blog-next").click(function () {-->
+    <!--                $('#blogCarousel').carousel('next')-->
+    <!--            });-->
+    <!--            $("#btn-blog-prev").click(function () {-->
+    <!--                $('#blogCarousel').carousel('prev')-->
+    <!--            });-->
+
+    <!--            $("#btn-client-next").click(function () {-->
+    <!--                $('#clientCarousel').carousel('next')-->
+    <!--            });-->
+    <!--            $("#btn-client-prev").click(function () {-->
+    <!--                $('#clientCarousel').carousel('prev')-->
+    <!--            });-->
+
+    <!--        });-->
+
+    <!--        $(window).load(function () {-->
+
+    <!--            $('.flexslider').flexslider({-->
+    <!--                animation: "slide",-->
+    <!--                slideshow: true,-->
+    <!--                start: function (slider) {-->
+    <!--                    $('body').removeClass('loading');-->
+    <!--                }-->
+    <!--            });-->
+    <!--        });-->
+
+    <!--    </script>-->
+    <style>
+        #topic_title :hover {
+
+        }
+    </style>
+</head>
+
+<body class="home" style="font-size: 18px">
+
+<div class="color-bar-1"></div>
+<div class="color-bar-2 color-bg"></div>
+
+
+<h3>发帖</h3>
+<form accept-charset="UTF-8" action="" class="publish" id="new_topic" method="post">
+    <table width="100%" border="0" cellspacing="0" cellpadding="6">
+        <colgroup>
+            <col width="140">
+            <col>
+        </colgroup>
+        <tbody>
+
+        <tr>
+            <th>帖子标题</th>
+            <td>
+                <label>
+                    <input required id="topic_title" maxlength="80" name="postname" size="60" type="text">
+                </label>
+            </td>
+        </tr>
+
+        <tr>
+            <th valign="top">帖子简介</th>
+            <td>
+                <label>
+                    <input required id="topic_introduce" maxlength="80" name="introduce" size="60" type="text">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th valign="top">帖子内容</th>
+            <td>
+                <div class="body_count">
+                    <textarea style="width: 700px;" cols="62" rows="20" name="content"></textarea>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th>封面图</th>
+            <td>
+
+                <div>
+                    <input type="file" name="">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th>类别</th>
+            <td>
+                <div>
+                    <select>
+                        <option value="volvo">类别1</option>
+                        <option value="saab">类别2</option>
+                        <option value="opel">类别3</option>
+                        <option value="audi">类别4</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th></th>
+            <td>
+
+                <button class="btn btn-large" type="submit">发表帖子</button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+
+<!-- 结尾部分 -->
+<div class="footer-container" style="height: 20%;">
+    <div class="container">
+        <div style="margin-top: 30px" class="row">
+            <div class="span12 footer-col footer-sub">
+                <div class="row no-margin">
+                    <div class="span6"><span class="left">一个论坛</span>
+                    </div>
+                    <div class="span6">
+                            <span class="right">
+                            <a href="#">主页</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">选项1</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+                                    href="#">页面</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+                                    href="#">联系我们</a>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 尾部结束 -->
+
+<!-- 回到顶端 -->
+<div id="toTop" class="hidden-phone hidden-tablet">回到顶端</div>
+
+</body>
+</html>
