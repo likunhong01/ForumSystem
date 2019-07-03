@@ -39,13 +39,19 @@ def home(request):
 def all_tie(request, kid, reply_limit, time_limit):
     if request.method == 'GET':
         kinds = models.Kind.objects.filter()
-        if kid == 0 and reply_limit == 0 and time_limit == 0:
+        if kid == '0' and reply_limit == '0' and time_limit == '0':
             # 默认时间排序把帖子传过去
             topics = models.Topic.objects.filter()
         else:
+            # request.path_info   # 获取当前url
+            # from django.urls import reverse
+            # reverse('all_tie', kwargs={'kid': '0', 'reply_limit': '0', 'time_limit': '0'})
+
             topics = models.Topic.objects.filter()
+
             # 筛选分类
-            topics.filter(t_kind=kid)
+            if kid != '0':
+                topics = models.Topic.objects.filter(t_kind=kid)
 
             # 筛选回复数量
             tmp = []
@@ -89,6 +95,9 @@ def all_tie(request, kid, reply_limit, time_limit):
         response = {
             'topics': topics,
             'kinds': kinds,
+            'kid': kid,
+            'time_limit': time_limit,
+            'reply_limit': reply_limit,
         }
         return render(request, 'all.html', response)
 

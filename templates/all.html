@@ -60,19 +60,19 @@
 
         <!-- 导航栏 -->
         <div class="span7 navigation" style="width: 300px">
-            <div class="navbar hidden-phone">
+            <div class="navbar hidden-phone" style="height: 40px;">
 
                 <ul class="nav">
                     <li class="dropdown active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="home.html">主页 <b
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/home">主页 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="home.html">全显示</a></li>
+                            <li><a href="/home">全显示</a></li>
                             <li><a href="index-gallery.htm">只显示帖子列表</a></li>
                             <li><a href="index-slider.htm">只显示推荐帖子TOP 10</a></li>
                         </ul>
                     </li>
-                    <li><a href="features.htm">选项1</a></li>
+                    <li><a href="/publish">发帖</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">页面 <b
                                 class="caret"></b></a>
@@ -83,7 +83,12 @@
                             <li><a href="page-double-sidebar.htm">显示两条</a></li>
                         </ul>
                     </li>
-                    <li><a href="page-contact.htm">联系我们</a></li>
+                    {% if uid %}
+                        <li><a>{{ uid }}欢迎你</a></li>
+                        <li><a href="/login">退出</a></li>
+                    {% else %}
+                        <li><a href="/login">登录</a></li>
+                    {% endif %}
                 </ul>
 
             </div>
@@ -120,27 +125,31 @@
         <div class="span12 gallery">
 
             <!-- 筛选条件-->
-            <ul id="filterOptions" class="gallery-cats clearfix">
+            <ul id="filterOptions1" class="gallery-cats clearfix">
                 <li class="active">帖子分类</li>
-                <li class="active"><a href="#" class="all">全部</a></li>
+                <li class="active"><a href="/all-0-{{ reply_limit }}-{{ time_limit }}" class="all">全部</a></li>
                 {% for k in kinds %}
-                <li><a href="#" class="illustration">{{ k.k_name }}</a></li>
+                    {% if kid == k.id %}
+                        <li><a href="/all-{{ k.id }}-{{ reply_limit }}-{{ time_limit }}" class="active illustration">{{ k.k_name }}</a></li>
+                    {% else %}
+                        <li><a href="/all-{{ k.id }}-{{ reply_limit }}-{{ time_limit }}" class="illustration">{{ k.k_name }}</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <ul id="filterOptions2" class="gallery-cats clearfix">
                 <li class="active">回复数量</li>
-                <li class="active"><a href="#" class="all">全部</a></li>
-                <li><a href="#" class="illustration">大于100</a></li>
-                <li><a href="#" class="design">30-100</a></li>
-                <li><a href="#" class="video">低于30</a></li>
+                <li class="active"><a href="/all-{{ kid }}-0-{{ time_limit }}" class="all">全部</a></li>
+                <li><a href="/all-{{ kid }}-1-{{ time_limit }}" class="illustration">大于100</a></li>
+                <li><a href="/all-{{ kid }}-2-{{ time_limit }}" class="design">30-100</a></li>
+                <li><a href="/all-{{ kid }}-3-{{ time_limit }}" class="video">低于30</a></li>
             </ul>
             <ul id="filterOptions3" class="gallery-cats clearfix">
                 <li class="active">发布时间</li>
-                <li class="active"><a href="#" class="all">全部</a></li>
-                <li><a href="#" class="illustration">一个月内</a></li>
-                <li><a href="#" class="design">3个月内</a></li>
-                <li><a href="#" class="video">6个月内</a></li>
-                <li><a href="#" class="video">1年内</a></li>
+                <li class="active"><a href="/all-{{ kid }}-{{ reply_limit }}-0" class="all">全部</a></li>
+                <li><a href="/all-{{ kid }}-{{ reply_limit }}-1" class="illustration">一个月内</a></li>
+                <li><a href="/all-{{ kid }}-{{ reply_limit }}-2" class="design">3个月内</a></li>
+                <li><a href="/all-{{ kid }}-{{ reply_limit }}-3" class="video">6个月内</a></li>
+                <li><a href="/all-{{ kid }}-{{ reply_limit }}-4" class="video">1年内</a></li>
             </ul>
 
             <!-- 列表 -->
@@ -150,8 +159,8 @@
                     <!-- 帖子列表 -->
                     {% for t in topics %}
                         <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                            <a href="single.html"><img src="{{ t.t_photo }}" alt="Gallery"></a>
-                            <span class="project-details"><a href="single.html">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
+                            <a href="/single/{{ t.id }}"><img src="{{ t.t_photo }}" alt="Gallery"></a>
+                            <span class="project-details"><a href="/single/{{ t.id }}">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
                         </li>
                     {% endfor %}
 
@@ -186,7 +195,7 @@
                     </div>
                     <div class="span6">
                             <span class="right">
-                            <a href="#">主页</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">选项1</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+                            <a href="/home">主页</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/publish">发帖</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
                                     href="#">页面</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
                                     href="#">联系我们</a>
                             </span>

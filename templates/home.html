@@ -91,27 +91,20 @@
 
         <!-- 导航栏 -->
         <div class="span7 navigation">
-            <div class="navbar hidden-phone">
+            <div class="navbar hidden-phone" style="height: 40px;">
 
                 <ul class="nav">
-                    <li class="dropdown active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="home.html">主页 <b
-                                class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/home">全显示</a></li>
-                            <li><a href="#">只显示帖子列表</a></li>
-                            <li><a href="#">只显示推荐帖子TOP 10</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">选项1</a></li>
+                    <li class="active"><a href="/home">主页</a></li>
+                    <li><a href="/publish">发帖</a>&nbsp;</li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">页面 <b
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">看帖 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">全显示</a></li>
-                            <li><a href="#">显示右边</a></li>
-                            <li><a href="#">显示左边</a></li>
-                            <li><a href="#">显示两条</a></li>
+                            <li><a href="/all-0-0-0">全部帖子</a></li>
+                            <li><a href="/all-1-0-0">军事</a></li>
+                            <li><a href="/all-2-0-0">美食</a></li>
+                            <li><a href="/all-3-0-0">汽车</a></li>
+                            <li><a href="/all-4-0-0">IT</a></li>
                         </ul>
                     </li>
                     {% if uid %}
@@ -135,7 +128,7 @@
                         <option value="index.htm">- 全显示</option>
                         <option value="index-gallery.htm">- 只显示帖子列表</option>
                         <option value="index-slider.htm">- 只显示轮播图</option>
-                        <option value="features.htm">选项1</option>
+                        <option value="publish.html">发帖</option>
                         <option value="page-full-width.htm">页面</option>
                         <option value="page-full-width.htm">- 全显示</option>
                         <option value="page-right-sidebar.htm">- 右边</option>
@@ -159,7 +152,7 @@
             {% for a in a_list %}
                 <a class="top10">{{ a.a_title }}</a>
             {% endfor %}
-{#            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>#}
+            {#            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>#}
         </div>
 
         <!-- 指导 -->
@@ -177,7 +170,7 @@
 
         <div class="span12">
             <h5 class="title-bg">帖子推荐
-                <button class="btn btn-mini btn-inverse hidden-phone" type="button">查看全部</button>
+                <a style="float: right;" href="/all-0-0-0" class="btn btn-mini btn-inverse hidden-phone" type="button">查看全部</a>
             </h5>
 
             <!-- 网格，全部帖子 -->
@@ -188,15 +181,9 @@
                     <!-- 1 -->
                     {% for t in r_list %}
                         <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="/static/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-                        <a href="single.html"><img src="{{ t.t_photo }}" alt="Gallery"></a>
-                        <span class="project-details"><a href="single.html">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
+                            <a href="/single/{{ t.t_id }}"><img src="{{ t.t_photo }}" alt="Gallery"></a>
+                            <span class="project-details"><a
+                                    href="single.html">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
                         </li>
                     {% endfor %}
                 </ul>

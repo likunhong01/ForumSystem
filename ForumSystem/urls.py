@@ -20,8 +20,8 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^all/', views.all_tie),  # 全部帖子
-    url(r'^all-(?P<kid>\d+)-/(?P<reply_number>\d+)-(?P<time_limit>\d+)', views.all_tie),  # 按条件搜索帖子
+    # url(r'^all/', views.all_tie),  # 全部帖子
+    url(r'^all-(?P<kid>\d+)-(?P<reply_limit>\d+)-(?P<time_limit>\d+)', views.all_tie),  # 按条件搜索帖子
     url(r'^home/', views.home),  # 主页
     url(r'^login/', views.login),  # 登录注册
     url(r'^publish/', views.publish),  # 发布帖子
