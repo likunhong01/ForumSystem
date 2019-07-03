@@ -12,7 +12,7 @@ class User(models.Model):
 
 # 帖子表
 class Topic(models.Model):
-    t_id = models.CharField(verbose_name='帖子id', max_length=16)
+    # t_id = models.CharField(verbose_name='帖子id', max_length=16)
     t_uid = models.CharField(verbose_name='帖子所属用户id', max_length=16)
     t_kind = models.CharField(verbose_name='类别', max_length=32)
     create_time = models.DateField(verbose_name='创建时间', auto_now_add=True)
@@ -20,7 +20,7 @@ class Topic(models.Model):
     t_content = models.CharField(verbose_name='帖子正文', max_length=3000)
     t_title = models.CharField(verbose_name='帖子标题', max_length=64)
     t_introduce = models.CharField(verbose_name='帖子简介', max_length=256)
-    recommend = models.BooleanField(verbose_name='是否推荐')
+    recommend = models.BooleanField(verbose_name='是否推荐', default=False)
 
 
 # 回复表
@@ -34,12 +34,12 @@ class Reply(models.Model):
 
 # 分类表
 class Kind(models.Model):
-    k_id = models.CharField(verbose_name='分类id', max_length=16)
+    # k_id = models.CharField(verbose_name='分类id', max_length=16)
     k_name = models.CharField(verbose_name='分类名称', max_length=16)
 
 
 # 公告表
 class Announcement(models.Model):
-    a_id = models.CharField(verbose_name='公告id', max_length=16)
-    a_title = models.CharField(verbose_name='公告标题', max_length=16)
-    a_content = models.CharField(verbose_name='公告内容', max_length=16, null=True)
+    # a_id = models.CharField(verbose_name='公告id', max_length=16)
+    a_title = models.CharField(verbose_name='公告标题', max_length=64)
+    a_content = models.CharField(verbose_name='公告内容', max_length=3000, null=True)

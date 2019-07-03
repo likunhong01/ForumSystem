@@ -114,7 +114,14 @@
                             <li><a href="#">显示两条</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">联系我们</a></li>
+                    {% if uid %}
+                        <li><a>{{ uid }}，欢迎你</a></li>
+                        <li><a href="/login">退出</a></li>
+                    {% else %}
+                        <li><a href="/login">登录</a></li>
+                    {% endif %}
+
+
                 </ul>
 
             </div>
@@ -140,7 +147,6 @@
             </form>
 
         </div>
-
     </div>
     <!-- 3个结束 -->
 
@@ -154,23 +160,14 @@
                 <a class="top10">{{ a.a_title }}</a>
             {% endfor %}
 {#            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>#}
-{#            <a class="top10">第二名</a>#}
-{#            <a class="top10">第三名</a>#}
-{#            <a class="top10">第四名</a>#}
-{#            <a class="top10">第五名</a>#}
-{#            <a class="top10">第六名</a>#}
-{#            <a class="top10">第七名</a>#}
-{#            <a class="top10">第八名</a>#}
-{#            <a class="top10">第九名</a>#}
-{#            <a class="top10">第十名</a>#}
         </div>
 
         <!-- 指导 -->
         <div class="span4">
             <h3>欢迎来到一个论坛 <br/>
-                这是公告</h3>
-            <p class="lead">tip：左边是top10，下面是按时间排序的帖子。</p>
-            <p>左边是top10，下面是按时间排序的帖子。请继续看。</p>
+                这是指南</h3>
+            <p class="lead">tip：左边是top10公告，下面是按时间排序的帖子。</p>
+            <p>左边是top10公告，下面是按时间排序的帖子。请继续看。</p>
         </div>
     </div>
     <!-- top 10结束 -->
@@ -202,109 +199,6 @@
                         <span class="project-details"><a href="single.html">{{ t.t_title }}</a>{{ t.t_introduce }}</span>
                         </li>
                     {% endfor %}
-
-{#                    <li class="span3 gallery-item" data-id="id-1" data-type="illustration">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">第一个帖子</a>第一个帖子简介</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 2 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-2" data-type="illustration">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 3 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-3" data-type="web">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="#" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 4 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-4" data-type="video">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 5 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-5" data-type="web illustration">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 6 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-6" data-type="illustration design">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 7 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-7" data-type="design">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
-{##}
-{#                    <!-- 8 -->#}
-{#                    <li class="span3 gallery-item" data-id="id-8" data-type="web video">#}
-{#                        <span class="gallery-hover-4col hidden-phone hidden-tablet">#}
-{#                            <span class="gallery-icons">#}
-{#                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox"#}
-{#                                   title="Custom Illustration" data-rel="prettyPhoto"></a>#}
-{#                                <a href="single.html" class="item-details-link"></a>#}
-{#                            </span>#}
-{#                        </span>#}
-{#                        <a href="single.html"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>#}
-{#                        <span class="project-details"><a href="single.html">帖子名称</a>帖子介绍</span>#}
-{#                    </li>#}
                 </ul>
             </div>
         </div>

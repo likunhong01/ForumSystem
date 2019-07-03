@@ -8,31 +8,31 @@
     <!-- CSS
     ================================================== -->
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css"/>
-    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css"/>
+    <link rel="stylesheet" href="/static/css/custom-styles.css">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" href="css/style-ie.css"/>
+    <link rel="stylesheet" href="/static/css/style-ie.css"/>
     <![endif]-->
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png">
 
     <!-- JS
     ================================================== -->
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.quicksand.js"></script>
-    <script src="js/jquery.custom.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/jquery.quicksand.js"></script>
+    <script src="/static/js/jquery.custom.js"></script>
 
 </head>
 
@@ -43,23 +43,20 @@
 <div class="container">
 
     <!-- logo，导航栏 -->
-    <div class="row header"><!-- Begin Header -->
+    <div class="row header">
 
-        <!-- 左上角图片和logo
-        ================================================== -->
+        <!-- 左上角图片和logo -->
         <div class="span5 logo" style="width: 250px">
-            <!--            <a href="index.htm"><img src="img/piccolo-logo.png" alt=""/></a>-->
             <h5 style="font-size: 28px">一 个 论 坛</h5>
         </div>
 
-        <!-- 导航栏
-        ================================================== -->
+        <!-- 导航栏 -->
         <div class="span7 navigation">
             <div class="navbar hidden-phone">
 
                 <ul class="nav">
                     <li class="dropdown active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="home.html">主页 <b
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/home">主页 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="home.html">全显示</a></li>
@@ -78,13 +75,17 @@
                             <li><a href="page-double-sidebar.htm">显示两条</a></li>
                         </ul>
                     </li>
-                    <li><a href="page-contact.htm">联系我们</a></li>
+                    {% if uid %}
+                        <li><a>{{ uid }}，欢迎你</a></li>
+                        <li><a href="/login">退出</a></li>
+                    {% else %}
+                        <li><a href="/login">登录</a></li>
+                    {% endif %}
                 </ul>
 
             </div>
 
-            <!-- 移动端的导航栏
-            ================================================== -->
+            <!-- 移动端的导航栏 -->
             <form action="#" id="mobile-nav" class="visible-phone">
                 <div class="mobile-nav-select">
                     <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
@@ -119,22 +120,19 @@
 
                 <div class="span6">
                     <!-- 图片 -->
-                    <img src="img/gallery/111.png" class="align-left thumbnail" alt="image">
+                    <img src="{{ t_photo }}" class="align-left thumbnail" alt="image">
                     <!-- 基本信息 -->
                     <ul class="project-info">
-                        <li><h6>发布时间:</h6> 2019-3-30</li>
-                        <li><h6>帖子类别:</h6> 前端技术</li>
-                        <li><h6>作者:</h6> 昆昆欧巴巴</li>
+                        <li><h6>发布时间:</h6> {{ t_time }}</li>
+                        <li><h6>帖子类别:</h6> {{ t_kind }}</li>
+                        <li><h6>作者:</h6> {{ t_uid }}</li>
                     </ul>
                 </div>
 
                 <div class="span6">
-                    <h2>帖子标题</h2>
-                    <p class="lead">帖子简介帖子简介帖子简介帖子简介帖子简介帖子简介帖子简介帖子简介帖子简介</p>
-                    <p>
-                        帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内
-                        容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子
-                        内容帖子内容帖子内容帖子内容帖子内容帖子内容帖子内容。</p>
+                    <h2>{{ t_title }}</h2>
+                    <p class="lead">{{ t_introduce }}</p>
+                    <p>{{ t_content }}</p>
                 </div>
             </div>
 
@@ -162,33 +160,15 @@
             <div class="row">
                 <div class="span6" style="width: 100%;">
                     <ul class="project-info">
-                        <li>
-                            <h6>李昆昆 说:</h6> 写的真好啊！
-                            <span style="float: right;">2019-7-1</span>&nbsp;
-                            <a style="float: right;margin-right: 10px">回复</a>
-                        </li>
-                        <li>
-                            <h6>赵鑫 说:</h6> 写的不赖啊！！！
-                            <span style="float: right;">2019-7-1</span>&nbsp;
-                            <a style="float: right;margin-right: 10px">回复</a>
-                        </li>
-                        <li>
-                            <h6>周嘉禾 说:</h6> 真的很好啊！
-                            <span style="float: right;">2019-7-1</span>&nbsp;
-                            <a data-toggle="modal" data-target=".bs-example-modal-sm" style="float: right;margin-right: 10px">回复</a>
-                        </li>
+                        {% for r in reply_list %}
+                            <li>
+                                <h6>{{ r.r_uid }} 说:</h6> {{ r.r_content }}
+                                <span style="float: right;">{{ r.r_time }}</span>&nbsp;
+{#                                <a style="float: right;margin-right: 10px">回复</a>#}
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-<!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>-->
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <span>回复李昆昆：</span>
-                <input type="text" style="width: 300px;">
-                <input type="submit" value="提交">
             </div>
         </div>
     </div>
