@@ -36,11 +36,61 @@ def home(request):
         return render(request, 'home.html', response)
 
 
-def all_tie(request):
+def all_tie(request, kid, reply_limit, time_limit):
     if request.method == 'GET':
-        # 默认时间排序把帖子传过去
-        topics = models.Topic.objects.filter()
-        return render(request, 'all.html', {'topics': topics})
+        kinds = models.Kind.objects.filter()
+        if kid == 0 and reply_limit == 0 and time_limit == 0:
+            # 默认时间排序把帖子传过去
+            topics = models.Topic.objects.filter()
+        else:
+            topics = models.Topic.objects.filter()
+            # 筛选分类
+            topics.filter(t_kind=kid)
+
+            # 筛选回复数量
+            tmp = []
+            for topic in topics:
+                # 查看每个帖子的回复数量
+                count = len(models.Reply.objects.filter(r_tid=topic.id))
+                if reply_limit == 0:
+                    pass
+                elif reply_limit == 1:  # 1是大于100
+                    if count < 100:
+                        continue
+                elif reply_limit == 2:  # 2是30-100
+                    if count < 30 or count > 100:
+                        continue
+                elif reply_limit == 3:  # 3是小于30
+                    if count > 30:
+                        continue
+                tmp.append(topic)
+            topics = tmp
+
+            # 筛选发布时间
+            tmp = []
+            for topic in topics:
+                if time_limit == 0: # 0是全部时间
+                    pass
+                elif time_limit == 1:   # 1是1个月内
+                    # 如果在限制之前，就筛掉
+                    pass
+                elif time_limit == 2:   # 2是3个月内
+                    # 如果在限制之前，就筛掉
+                    pass
+                elif time_limit == 3:   # 3是6个月内
+                    # 如果在限制之前，就筛掉
+                    pass
+                elif time_limit == 4:   # 4是1年内
+                    # 如果在限制之前，就筛掉
+                    pass
+                tmp.append(topic)
+            topics = tmp
+
+        response = {
+            'topics': topics,
+            'kinds': kinds,
+        }
+        return render(request, 'all.html', response)
 
     elif request.method == 'POST':
         # 搜索接收一个字段，查询标题或者简介里有关键字的帖子
