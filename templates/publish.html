@@ -38,7 +38,8 @@
 
 
 <h3>发帖</h3>
-<form accept-charset="UTF-8" action="/publish" class="publish" id="new_topic" method="post">
+<form accept-charset="UTF-8" action="/publish/" class="publish" id="new_topic" method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
     <table width="100%" border="0" cellspacing="0" cellpadding="6">
         <colgroup>
             <col width="140">
@@ -50,7 +51,7 @@
             <th>帖子标题</th>
             <td>
                 <label>
-                    <input required id="topic_title" maxlength="80" name="t_name" size="60" type="text">
+                    <input required id="topic_title" maxlength="80" name="t_title" size="60" type="text">
                 </label>
             </td>
         </tr>
@@ -77,7 +78,7 @@
             <td>
 
                 <div>
-                    <input type="file" name="t_photo">
+                    <input type="file" name="t_photo" accept="image/*">
                 </div>
             </td>
         </tr>
@@ -87,8 +88,8 @@
             <td>
                 <div>
                     <select name="t_kind">
-                        {% for kindname in kindnames %}
-                            <option value="volvo">{{ kindname }}</option>
+                        {% for kind in kinds %}
+                            <option value="{{ kind.id }}">{{ kind.k_name }}</option>
                         {% endfor %}
                     </select>
                 </div>

@@ -26,4 +26,7 @@ urlpatterns = [
     url(r'^login/', views.login),  # 登录注册
     url(r'^publish/', views.publish),  # 发布帖子
     url(r'^single/(?P<tid>\d+)/', views.single),  # 单个帖子
+    url(r'^edit-pwd/', views.edit_pwd),  # 修改密码
+    url(r'^my-admin/', views.admin),  # 修改密码
+
 ]

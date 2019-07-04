@@ -97,18 +97,24 @@
                     <li class="active"><a href="/home">主页</a></li>
                     <li><a href="/publish">发帖</a>&nbsp;</li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">看帖 <b
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">看帖 <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/all-0-0-0">全部帖子</a></li>
-                            <li><a href="/all-1-0-0">军事</a></li>
-                            <li><a href="/all-2-0-0">美食</a></li>
-                            <li><a href="/all-3-0-0">汽车</a></li>
-                            <li><a href="/all-4-0-0">IT</a></li>
+                            {% for kind in kinds %}
+                                <li><a href="/all-{{ kind.id }}-0-0">{{ kind.k_name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
+
                     {% if uid %}
-                        <li><a>{{ uid }}，欢迎你</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">{{ uid }}，欢迎你<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/edit-pwd">修改密码</a></li>
+                            </ul>
+                        </li>
+
                         <li><a href="/login">退出</a></li>
                     {% else %}
                         <li><a href="/login">登录</a></li>
@@ -124,17 +130,19 @@
                 <div class="mobile-nav-select">
                     <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
                         <option value="">导航栏</option>
-                        <option value="index.htm">主页</option>
-                        <option value="index.htm">- 全显示</option>
-                        <option value="index-gallery.htm">- 只显示帖子列表</option>
-                        <option value="index-slider.htm">- 只显示轮播图</option>
-                        <option value="publish.html">发帖</option>
-                        <option value="page-full-width.htm">页面</option>
-                        <option value="page-full-width.htm">- 全显示</option>
-                        <option value="page-right-sidebar.htm">- 右边</option>
-                        <option value="page-left-sidebar.htm">- 左边</option>
-                        <option value="page-double-sidebar.htm">- 双边</option>
-                        <option value="page-contact.htm">联系我们</option>
+                        <option value="/home">主页</option>
+                        <option value="/publish">发帖</option>
+                        <option value="/all-0-0-0">看帖</option>
+                        <option value="/all-0-0-0">- 全部帖子</option>
+                        {% for kind in kinds %}
+                            <option value="/all-{{ kind.id }}-0-0">- {{ kind.k_name }}</option>
+                        {% endfor %}
+
+                        {% if uid %}
+                        <option value="/login">退出</option>
+                        {% else %}
+                        <option value="/login">登录</option>
+                        {% endif %}
                     </select>
                 </div>
             </form>

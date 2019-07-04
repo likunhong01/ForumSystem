@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>论坛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 样式-->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css"/>
+    <link rel="stylesheet" href="/static/css/flexslider.css"/>
+    <link rel="stylesheet" href="/static/css/custom-styles.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+    <![endif]-->
+
+    <!-- Favicons图标 -->
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png">
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/jquery.flexslider.js"></script>
+    <script src="/static/js/jquery.custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btn-blog-next").click(function () {
+                $('#blogCarousel').carousel('next')
+            });
+            $("#btn-blog-prev").click(function () {
+                $('#blogCarousel').carousel('prev')
+            });
+
+            $("#btn-client-next").click(function () {
+                $('#clientCarousel').carousel('next')
+            });
+            $("#btn-client-prev").click(function () {
+                $('#clientCarousel').carousel('prev')
+            });
+
+        });
+
+        $(window).load(function () {
+
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshow: true,
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body class="home">
+<!-- Color Bars (above header)-->
+<div class="color-bar-1"></div>
+<div class="color-bar-2 color-bg"></div>
+
+
+<div style="width: 100%;height: 60%;">
+    <div style="width: 300px; height: 100px; margin: 0 auto;margin-top: 15%;margin-bottom: 20%;">
+        <div class="span4">
+            <form action="/edit-pwd/" method="post">
+                {% csrf_token %}
+                <div class="input-prepend" style="width: 300px;">
+                    <span class="add-on">更改账号：</span><input style="width: 200px" class="span2" id="uid"
+                                                            size="16" type="text" name="old_pwd"
+                                                            disabled="disabled" placeholder="{{ uid }}">
+inputttt        </div>
+                <div class="input-prepend" style="width: 300px;">
+                    <span class="add-on">原始密码：</span><input style="width: 200px" class="span2" id="uid"
+                                                            size="16" type="password" name="old_pwd"
+                                                            placeholder="原密码">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on">新的密码：</span><input style="width: 200px" class="span2" id="pwd"
+                                                            size="16" type="password" name="new_pwd1"
+                                                            placeholder="新密码">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on">确认密码：</span><input style="width: 200px" class="span2" id="pwd2"
+                                                            size="16" type="password" name="new_pwd2"
+                                                            placeholder="确认密码">
+                </div>
+                <div style="width: 300px;padding: 20px;margin: 0 auto;">
+                    <button id="login-button" style="margin-right: 20px;margin-left: 20px;" class="btn btn-large"
+                            type="submit">提交
+                    </button>
+                    <button id="cancel-button" style="margin-right: 20px;margin-left: 20px;"
+                            class="btn btn-large btn-inverse"
+                            type="submit">取消
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- 结尾部分 -->
+<div class="footer-container" style="height: 20%;">
+    <div class="container">
+        <div style="margin-top: 30px" class="row">
+            <div class="span12 footer-col footer-sub">
+                <div class="row no-margin">
+                    <div class="span6"><span class="left">一个论坛</span>
+                    </div>
+                    <div class="span6">
+                            <span class="right">
+                            <a href="#">主页</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">选项1</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+                                    href="#">页面</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+                                    href="#">联系我们</a>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 尾部结束 -->
+
+<!-- 回到顶端 -->
+<div id="toTop" class="hidden-phone hidden-tablet">回到顶端</div>
+
+<script>
+    $('#login-button').click(function () {
+        var uid = $('#uid').val();
+        var pwd = $('#pwd').val();
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {'type': 'login', 'uid': uid, 'pwd': pwd},
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href = "/home";
+            }
+        });
+    });
+
+    $('#cancel-button').click(function () {
+        window.location.href = "/home";
+    });
+
+</script>
+</body>
+</html>

@@ -31,12 +31,18 @@ def home(request):
         # 把列表装进response
         response['r_list'] = r_list
 
+        # 把uid装进返回字典里
         response['uid'] = request.session['uid']
+
+        # 把所有类别装入返回字典里
+        kinds = models.Kind.objects.filter()
+        response['kinds'] = kinds
 
         return render(request, 'home.html', response)
 
 
 def all_tie(request, kid, reply_limit, time_limit):
+    uid = request.session.get('uid')
     if request.method == 'GET':
         kinds = models.Kind.objects.filter()
         if kid == '0' and reply_limit == '0' and time_limit == '0':
@@ -98,6 +104,7 @@ def all_tie(request, kid, reply_limit, time_limit):
             'kid': kid,
             'time_limit': time_limit,
             'reply_limit': reply_limit,
+            'uid': uid,
         }
         return render(request, 'all.html', response)
 
@@ -106,7 +113,9 @@ def all_tie(request, kid, reply_limit, time_limit):
         keys = request.POST.get('keys')
         # 按关键字查询标题里含有关键字的
         topics = models.Topic.objects.filter(t_title__icontains=keys)
-        return render(request, 'all.html', {'topics': topics})
+
+        kinds = models.Kind.objects.filter()
+        return render(request, 'all.html', {'topics': topics, 'kinds': kinds, 'uid': uid})
 
 
 def login(request):
@@ -158,28 +167,29 @@ def register(request):
 
 def publish(request):
     if request.method == 'GET':
-        name = []
-        for kind in models.Kind.objects.filter():
-            name.append(kind.k_name)
+        kinds = models.Kind.objects.filter()
         response = {
-            'kindnames': name
+            'kinds': kinds
         }
         return render(request, 'publish.html', response)
     elif request.method == 'POST':
         # session获取uid
         uid = request.session['uid']
         # 提交发布的文章
-        t_name = request.POST.get('t_name')
+        t_title = request.POST.get('t_title')
         t_introduce = request.POST.get('t_introduce')
         t_content = request.POST.get('t_content')
         t_kind = request.POST.get('t_kind')
+        print(t_title, t_introduce)
 
-        obj = models.Topic.objects.create(t_name=t_name, t_introduce=t_introduce,
+        obj = models.Topic.objects.create(t_title=t_title, t_introduce=t_introduce,
                                           t_content=t_content, t_kind=t_kind, t_uid=uid)
         t_id = obj.id
+
         # 存帖子图片
         t_photo = request.FILES.get('t_photo', None)
-        t_photo_path = 'static/img/t_photo/' + t_id + '_', t_photo.name
+        t_photo_path = 'static/img/t_photo/' + str(t_id) + '_' + t_photo.name
+
         if t_photo:
             # 保存文件
             import os
@@ -189,9 +199,9 @@ def publish(request):
             f.close()
 
         # 吧图片路径存入数据库
-        obj.save(t_photo=t_photo_path)
+        models.Topic.objects.filter(id=t_id).update(t_photo='/'+t_photo_path)
 
-        return redirect('/single/' + t_id)
+        return redirect('/single/' + str(t_id))
 
 
 def single(request, tid):
@@ -210,6 +220,7 @@ def single(request, tid):
         uid = request.session['uid']
 
         response = {
+            'tid': tid,
             't_uid': t_uid,
             't_time': t_time,
             't_kind': t_kind,
@@ -234,6 +245,64 @@ def single(request, tid):
         response['reply_list'] = reply_list
 
         return render(request, 'single.html', response)
+
     elif request.method == 'POST':
+        # 判断是否登录
+        uid = request.session.get('uid')
+        if not uid:
+            return redirect('/login')
         # 进行回复
-        pass
+        r_content = request.POST.get('r_content')
+
+        # 提交数据库
+        obj = models.Reply.objects.create(r_tid=tid,r_uid=uid,r_content=r_content)
+
+        r_id = str(obj.id)
+        r_photo = request.FILES.get('r_photo')
+        r_photo_path = ''
+        if r_photo:
+            # 保存文件
+            r_photo_path = 'static/img/r_photo/' + r_id + '_' + r_photo.name
+            import os
+            f = open(os.path.join(r_photo_path), 'wb')
+            for line in r_photo.chunks():
+                f.write(line)
+            f.close()
+
+        # 吧图片路径存入数据库
+        models.Reply.objects.filter(id=r_id).update(r_photo='/'+r_photo_path)
+        return redirect('/single/' + tid)
+
+
+def edit_pwd(request):
+    if request.method == 'GET':
+        uid = request.session.get('uid')
+        return render(request, 'edit-pwd.html', {'uid': uid})
+    if request.method == 'POST':
+        uid = request.session.get('uid')
+        old = request.POST.get('old_pwd')
+        new1 = request.POST.get('new_pwd1')
+        new2 = request.POST.get('new_pwd2')
+        if new1 == new2 and len(models.User.objects.filter(uid=uid, password=old)) != 0:
+            # 核对成功，修改密码
+            models.User.objects.filter(uid=uid).update(password=new1)
+        return redirect('/home')
+
+
+def admin(request):
+    if request.method == 'GET':
+        return render(request, 'admin.html')
+    elif request.method == 'POST':
+        admin_uid = request.POST.get('admin_id')
+        admin_pwd = request.POST.get('admin_pwd')
+
+        response = {'msg': '', 'status': False}
+
+        if admin_uid == 'guanliyuan' and admin_pwd == '123456':
+            # 管理员登录成功
+            response['status'] = True
+            request.session['admin_uid'] = 'guanliyuan'
+            return HttpResponse(json.dumps(response))
+        else:
+            response['msg'] = '用户名或者密码错误'
+            return HttpResponse(json.dumps(response))
