@@ -218,6 +218,7 @@ def single(request, tid):
         t_uid = topic.t_uid
         t_introduce = topic.t_introduce
         uid = request.session['uid']
+        admin_uid = request.session.get('admin_uid')
 
         response = {
             'tid': tid,
@@ -229,6 +230,7 @@ def single(request, tid):
             't_photo': t_photo,
             't_introduce': t_introduce,
             'uid': uid,
+            'admin_uid': admin_uid,
         }
 
         # 留言内容
@@ -239,7 +241,8 @@ def single(request, tid):
             single_reply = {
                 'r_uid': reply.r_uid,
                 'r_time': reply.r_time,
-                'r_content':reply.r_content,
+                'r_content': reply.r_content,
+                'r_id': reply.id,
             }
             reply_list.append(single_reply)
         response['reply_list'] = reply_list
@@ -249,6 +252,17 @@ def single(request, tid):
     elif request.method == 'POST':
         # 判断是否登录
         uid = request.session.get('uid')
+
+        # 删除回复，管理员才可以删除
+        p_type = request.POST.get('type')
+        print(p_type)
+        if p_type == 'delete':
+            response = {'msg': '', 'status': False}
+            r_id = request.POST.get('r_id')
+            models.Reply.objects.filter(id=r_id).delete()
+            response['status'] = True
+            return HttpResponse(json.dumps(response))
+
         if not uid:
             return redirect('/login')
         # 进行回复
@@ -278,6 +292,7 @@ def edit_pwd(request):
     if request.method == 'GET':
         uid = request.session.get('uid')
         return render(request, 'edit-pwd.html', {'uid': uid})
+
     if request.method == 'POST':
         uid = request.session.get('uid')
         old = request.POST.get('old_pwd')
@@ -289,6 +304,7 @@ def edit_pwd(request):
         return redirect('/home')
 
 
+# 管理员登录
 def admin(request):
     if request.method == 'GET':
         return render(request, 'admin.html')
@@ -306,3 +322,90 @@ def admin(request):
         else:
             response['msg'] = '用户名或者密码错误'
             return HttpResponse(json.dumps(response))
+
+
+# 公告管理
+def announcement(request):
+    if not request.session.get('admin_uid'):
+        return redirect('/my-admin')
+
+    # 查询所有公告
+    if request.method == 'GET':
+
+        announcements = models.Announcement.objects.filter()
+        response = {'announcements': announcements}
+        return render(request, 'announcement.html', response)
+
+    # 发公告，删公告
+    elif request.method == 'POST':
+        p_type = request.POST.get('type')
+        response = {'msg': '', 'status': False}
+        if p_type == 'delete':
+            a_id = request.POST.get('a_id')
+            models.Announcement.objects.filter(id=a_id).delete()
+            response['status'] = True
+        elif p_type == 'create':
+            # 添加一条公告
+            a_title = request.POST.get('a_title')
+            a_content = request.POST.get('a_content')
+            models.Announcement.objects.create(a_title=a_title, a_content=a_content)
+            response['status'] = True
+        return HttpResponse(json.dumps(response))
+
+
+# 标题，简介，时间，
+def topic_manage(request):
+    if not request.session.get('admin_uid'):
+        return redirect('/my-admin')
+
+    if request.method == 'GET':
+        topics = models.Topic.objects.filter()
+        response = {
+            'topics': topics,
+        }
+        return render(request, 'admin-home.html', response)
+    elif request.method == 'POST':
+        p_type = request.POST.get('type')
+        response = {'msg': '', 'status': False}
+        # 删除帖子
+        if p_type == 'delete':
+            t_id = request.POST.get('t_id')
+            models.Topic.objects.filter(id=t_id).delete()
+            response['status'] = True
+        # 是否推荐
+        if p_type == 'recommend':
+            t_id = request.POST.get('t_id')
+            models.Topic.objects.filter(id=t_id).update(recommend=True)
+            response['status'] = True
+        return HttpResponse(json.dumps(response))
+
+
+# 类别管理（板块管理）
+def kind_manage(request):
+    # 验证登录
+    if not request.session.get('admin_uid'):
+        return redirect('/my-admin')
+
+    if request.method == 'GET':
+        # get返回所有类别（板块）
+        kinds = models.Kind.objects.filter()
+        response = {
+            'kinds': kinds,
+        }
+        return render(request, 'kind-manage.html', response)
+    if request.method == 'POST':
+        p_type = request.POST.get('type')
+        response = {'msg': '', 'status': False}
+        # 删除类别
+        if p_type == 'delete':
+            k_id = request.POST.get('k_id')
+            models.Kind.objects.filter(id=k_id).delete()
+            response['status'] = True
+
+        # 添加类别
+        if p_type == 'create':
+            k_name = request.POST.get('k_name')
+            models.Kind.objects.create(k_name=k_name)
+            response['status'] = True
+
+        return HttpResponse(json.dumps(response))

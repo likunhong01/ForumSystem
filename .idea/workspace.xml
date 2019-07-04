@@ -2,21 +2,184 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a73c0aef-8451-43dd-af24-d80db681a16c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit-pwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/background/error-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/big/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/big/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/big/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/custom-select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/logo-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/logo-text.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/users/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/users/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/users/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/bootstrap/js/tether.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/js/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/js/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.source.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/API.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/FAQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/NEWS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/PLUGINS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-eu-gdp-growth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-japan-gdp-growth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/data-usa-gdp-growth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/ajax/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/annotating/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-interacting/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-multiple/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/date.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/africa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/antarctica" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/asia" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/australasia" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/backward" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/etcetera" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/europe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/factory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/iso3166.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/leapseconds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/northamerica" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/pacificnew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/solar87" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/solar88" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/solar89" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/southamerica" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/systemv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/yearistype.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time-zones/tz/zone.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/axes-time/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/basic-options/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/basic-usage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/canvas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/categories/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/examples.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/image/hs-2004-27-a-large-web.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/image/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/interacting/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/navigate/arrow-down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/navigate/arrow-left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/navigate/arrow-right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/navigate/arrow-up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/navigate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/percentiles/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/realtime/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/resize/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/selection/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/series-errorbars/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/series-pie/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/series-toggle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/series-types/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/shared/jquery-ui/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/stacking/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/symbols/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/threshold/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/tracking/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/visitors/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/examples/zooming/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/flot.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/flot/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/gmaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/gmaps.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/gmaps.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/jquery.gmaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.controls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.geofences.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.geometry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.layers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.map_types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.markers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.native_extensions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.overlays.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.static.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.streetview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/gmaps/lib/gmaps.utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/sticky-kit-master/dist/sticky-kit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/plugins/styleswitcher/jQuery.style.switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/blue-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/default-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/green-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/megna-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/megna.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/purple-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/red-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/flot-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.slimscroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/sidebarmenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/waves.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/announcement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/kind-manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ForumSystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ForumSystem/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/apple-touch-icon-114x114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/apple-touch-icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/author-avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/location-map.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/piccolo-footer-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/piccolo-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,31 +224,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app01/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForumSystem/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-              <folding>
-                <element signature="e#635#667#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="301" column="21" lean-forward="true" selection-start-line="301" selection-start-column="21" selection-end-line="301" selection-end-column="21" />
+            <state relative-caret-position="313">
+              <caret line="243" column="33" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -93,68 +235,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="136" column="42" lean-forward="true" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="11" column="28" selection-end-line="165" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/single.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+            <state relative-caret-position="373">
+              <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin-home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="111" column="87" lean-forward="true" selection-start-line="111" selection-start-column="87" selection-end-line="111" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/edit-pwd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/all.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="325">
+              <caret line="185" column="54" selection-start-line="185" selection-start-column="54" selection-end-line="185" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -169,6 +266,14 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>kind</find>
+      <find>topic</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>kin</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/static</dir>
     </dirStrings>
@@ -179,21 +284,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/gallery-single.htm" />
         <option value="$PROJECT_DIR$/app01/__init__.py" />
         <option value="$PROJECT_DIR$/ForumSystem/settings.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/app01/models.py" />
         <option value="$PROJECT_DIR$/templates/publish.html" />
-        <option value="$PROJECT_DIR$/templates/single.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/all.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/ForumSystem/urls.py" />
         <option value="$PROJECT_DIR$/templates/edit-pwd.html" />
         <option value="$PROJECT_DIR$/templates/admin.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/anno.html" />
+        <option value="$PROJECT_DIR$/ForumSystem/urls.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/announcement.html" />
+        <option value="$PROJECT_DIR$/templates/kind-manage.html" />
         <option value="$PROJECT_DIR$/app01/views.py" />
+        <option value="$PROJECT_DIR$/templates/single.html" />
+        <option value="$PROJECT_DIR$/templates/admin-home.html" />
       </list>
     </option>
   </component>
@@ -224,18 +333,7 @@
             <path>
               <item name="ForumSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ForumSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ForumSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ForumSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForumSystem" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ForumSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForumSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ForumSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -254,7 +352,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img/t_photo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -262,9 +360,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/img/t_photo" />
-      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/static/img/t_photo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
@@ -320,24 +420,24 @@
       <option name="presentableId" value="Default" />
       <updated>1561909164271</updated>
       <workItem from="1561909165456" duration="16457000" />
-      <workItem from="1562085047820" duration="29453000" />
+      <workItem from="1562085047820" duration="45921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45910000" />
+    <option name="totallyTimeSpent" value="62378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17528272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17528272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.2739726" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -362,41 +462,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/static/css/style-ie.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ForumSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app01/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47ae3cb6-5721-4752-aabd-d732b72e3838/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/img/gallery/gallery-img-1-full.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ForumSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3036">
-          <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/app01_announcement">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6a2e80c9-c669-4659-9cf8-7b1c2041cacc">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
     </entry>
     <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/app01_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -424,32 +497,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/img/gallery/gallery-img-1-3col.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/app01_reply">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6a2e80c9-c669-4659-9cf8-7b1c2041cacc">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/publish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/auth_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -485,67 +532,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/all.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        <state relative-caret-position="286">
+          <caret line="13" column="19" selection-end-line="392" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17958#17963#0#HTML" expanded="true" />
+            <element signature="e#18759#18764#0#HTML" expanded="true" />
+            <element signature="e#19560#19565#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages-profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="22" lean-forward="true" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/colors/red.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/pages-profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="33" lean-forward="true" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/kind-manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="60" lean-forward="true" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/app01_announcement">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="6a2e80c9-c669-4659-9cf8-7b1c2041cacc">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="127" column="15" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/announcement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202">
+          <caret line="249" column="11" lean-forward="true" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/kind-manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2274">
+          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/publish.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1244">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit-pwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3256">
+          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.flexslider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18966">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.easing.1.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2144">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2159" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13123">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForumSystem/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForumSystem/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app01/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
+        <state relative-caret-position="660">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ForumSystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        <state relative-caret-position="309">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding>
             <element signature="e#635#667#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/ForumSystem/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="11" column="28" selection-end-line="165" />
+        <state relative-caret-position="3036">
+          <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edit-pwd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
-          </folding>
+    <entry file="das://47ae3cb6-5721-4752-aabd-d732b72e3838/schema/forum_system/table/app01_reply">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="6a2e80c9-c669-4659-9cf8-7b1c2041cacc">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app01/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="301" column="21" lean-forward="true" selection-start-line="301" selection-start-column="21" selection-end-line="301" selection-end-column="21" />
+        <state relative-caret-position="313">
+          <caret line="243" column="33" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+    <entry file="file://$PROJECT_DIR$/templates/single.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="136" column="42" lean-forward="true" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+        <state relative-caret-position="373">
+          <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin-home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="185" column="54" selection-start-line="185" selection-start-column="54" selection-end-line="185" selection-end-column="54" />
         </state>
       </provider>
     </entry>

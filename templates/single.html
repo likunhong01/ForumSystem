@@ -159,6 +159,10 @@
                                 <h6>{{ r.r_uid }} 说:</h6> {{ r.r_content }}
                                 <span style="float: right;">{{ r.r_time }}</span>&nbsp;
 {#                                <a style="float: right;margin-right: 10px">回复</a>#}
+                                {% if admin_uid %}
+
+                                {% endif %}
+                                <a iddd="{{ r.r_id }}" onclick="deleter(this);" style="float: right;margin-right: 10px">删除</a>
                             </li>
                         {% endfor %}
                     </ul>
@@ -197,5 +201,26 @@
 <!-- 回到顶端 -->
 <div id="toTop" class="hidden-phone hidden-tablet">回到顶端</div>
 
+
+<script>
+    function deleter(ths) {
+        var rid = $(ths).attr("iddd");
+        alert(rid);
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {'type': 'delete','r_id': rid},
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href=window.location.href;
+            }
+        });
+    }
+</script>
 </body>
 </html>

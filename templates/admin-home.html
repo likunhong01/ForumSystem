@@ -1,10 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/images/favicon.png">
+    <title>帖子管理</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="/static/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
-<body>
+
+<body class="fix-header fix-sidebar card-no-border">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">欢迎您，管理员</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="active">
+                        <a href="/admin-home" class="waves-effect"><i class="fa fa-clock-o m-r-10"
+                                                                      aria-hidden="true"></i>帖子管理</a>
+                    </li>
+                    <li>
+                        <a href="/announcement" class="waves-effect"><i class="fa fa-user m-r-10"
+                                                                        aria-hidden="true"></i>公告管理</a>
+                    </li>
+                    <li>
+                        <a href="/kind-manage" class="waves-effect"><i class="fa fa-table m-r-10"
+                                                                       aria-hidden="true"></i>板块管理</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles ">
+                <div class="col-md-6 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">帖子管理</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- column -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>帖子名称</th>
+                                    <th>帖子简介</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for topic in topics %}
+                                    <tr>
+                                        <td>{{ topic.id }}</td>
+                                        <td>{{ topic.t_title }}</td>
+                                        <td>{{ topic.t_introduce }}</td>
+                                        <td>
+                                            <button style="float: right;" class="btn" iddd="{{ topic.id }}"
+                                                    onclick="deletet(this);">删除
+                                            </button>
+                                            <a href="/single/{{ topic.id }}">
+                                                <button style="float: right;" class="btn">
+                                                    查看
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer text-center">
+            © 2019 一个论坛
+        </footer>
+    </div>
+</div>
+<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="/static/assets/plugins/bootstrap/js/tether.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="/static/js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="/static/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="/static/js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<!--Custom JavaScript -->
+<script src="/static/js/custom.min.js"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!-- Flot Charts JavaScript -->
+<script src="/static/assets/plugins/flot/jquery.flot.js"></script>
+<script src="/static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="/static/js/flot-data.js"></script>
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<script src="/static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+<script>
+    function deletet(ths) {
+        var tid = $(ths).attr("iddd");
+        alert(tid);
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {
+                'type': 'delete',
+                't_id': tid
+            },
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href="/admin-home";
+            }
+        });
+    }
+</script>
 
 </body>
+
 </html>

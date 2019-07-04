@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/images/favicon.png">
+    <title>板块管理</title>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/colors/blue.css" id="theme" rel="stylesheet">
+
+</head>
+
+<body class="fix-header card-no-border">
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+<div id="main-wrapper">
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+            <div class="navbar-collapse">
+                <!--<ul class="navbar-nav mr-auto mt-md-0 ">
+                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    <li class="nav-item hidden-sm-down">
+                        <form class="app-search p-l-20">
+                            <input type="text" class="form-control" placeholder="请输入..."> <a class="srh-btn"><i class="ti-search"></i></a>
+                        </form>
+                    </li>
+                </ul>-->
+                <ul class="navbar-nav my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">欢迎您，管理员</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li>
+                        <a href="/admin-home" class="waves-effect"><i class="fa fa-clock-o m-r-10"
+                                                                      aria-hidden="true"></i>帖子管理</a>
+                    </li>
+                    <li>
+                        <a href="/announcement" class="waves-effect"><i class="fa fa-user m-r-10"
+                                                                        aria-hidden="true"></i>公告管理</a>
+                    </li>
+                    <li class="active">
+                        <a href="/kind-manage" class="waves-effect"><i class="fa fa-table m-r-10"
+                                                                       aria-hidden="true"></i>板块管理</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row page-titles">
+                <div class="col-md-6 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">板块管理</h3>
+                </div>
+            </div>
+            <div class="row">
+                <!-- column -->
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 20%;">序号</th>
+                                        <th>板块名称</th>
+                                        <th style="width: 25%;text-align: right;"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for kind in kinds %}
+                                        <tr>
+                                            <td>{{ kind.id }}</td>
+                                            <td>{{ kind.k_name }}</td>
+                                            <td>
+                                                <button style="float: right;" class="btn" iddd="{{ kind.id }}"
+                                                        onclick="deletek(this);">删除
+                                                </button>
+                                                <a href="/all-{{ kind.id }}-0-0"> <button style="float: right;" class="btn">
+                                                    查看所有
+                                                </button></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+
+        </div>
+        <div style="width: 100%">
+            <div class="card">
+                <div class="card-block">
+                    <form class="form-horizontal form-material">
+                        <div class="form-group">
+                            <label class="col-md-12">版块名</label>
+                            <div class="col-md-12">
+                                <input id="k_name" type="text" placeholder="" class="form-control form-control-line">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button id="publishk" class="btn btn-success">添加</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+
+    <footer class="footer text-center">
+        © 2019 一个论坛
+    </footer>
+</div>
+</div>
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="/static/assets/plugins/bootstrap/js/tether.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="/static/js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="/static/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="/static/js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<!--Custom JavaScript -->
+<script src="/static/js/custom.min.js"></script>
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<script src="/static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+
+<script>
+    function deletek(ths) {
+        var kid = $(ths).attr("iddd");
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {'type': 'delete', 'k_id': kid},
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href = "/kind-manage";
+            }
+        });
+    }
+
+    $('#publishk').click(function () {
+        var k_name = $('#k_name').val();
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {'type': 'create', 'k_name': k_name},
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data);
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href = "/kind-manage";
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
