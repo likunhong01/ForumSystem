@@ -158,7 +158,7 @@
         <div class="span8">
             <h3 style="margin-top: -40px;"> &nbsp;&nbsp;TOP 10 公告<br/></h3>
             {% for a in a_list %}
-                <a class="top10">{{ a.a_title }}</a>
+                <a href="/single-an-{{ a.a_id }}" class="top10">{{ a.a_title }}</a>
             {% endfor %}
             {#            <a class="top10">第一名：重磅！Google推出了Python编辑器，惊呆了小伙伴......</a>#}
         </div>

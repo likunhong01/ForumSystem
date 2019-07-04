@@ -137,7 +137,7 @@
                                             <td>{{ announcement.id }}</td>
                                             <td>{{ announcement.a_title }}</td>
                                             <td>
-                                                <button class="btn" style="float: right;">查看</button>
+                                                <a href="/single-an-{{ announcement.id }}"><button class="btn" style="float: right;">查看</button></a>
                                                 <button class="btn delete" style="float: right;"
                                                         onclick="deletea(this);" iddd="{{ announcement.id }}">删除
                                                 </button>

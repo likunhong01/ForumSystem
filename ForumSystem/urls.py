@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^announcement/', views.announcement),  # 公告管理
     url(r'^admin-home/', views.topic_manage),  # 帖子管理，也是主页面
     url(r'^kind-manage/', views.kind_manage),  # 板块管理
+    url(r'^single-an-(?P<aid>\d+)/', views.single_an),  # 单个公告显示
 
 ]

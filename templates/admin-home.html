@@ -105,6 +105,7 @@
                                     <th>序号</th>
                                     <th>帖子名称</th>
                                     <th>帖子简介</th>
+                                    <th>是否置顶</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -114,6 +115,11 @@
                                         <td>{{ topic.id }}</td>
                                         <td>{{ topic.t_title }}</td>
                                         <td>{{ topic.t_introduce }}</td>
+                                        {% if topic.recommend %}
+                                            <td>是</td>
+                                        {% else %}
+                                            <td>否</td>
+                                        {% endif %}
                                         <td>
                                             <button style="float: right;" class="btn" iddd="{{ topic.id }}"
                                                     onclick="deletet(this);">删除
@@ -123,6 +129,12 @@
                                                     查看
                                                 </button>
                                             </a>
+                                            <button style="float: right;" class="btn" iddd="{{ topic.id }}"
+                                                    onclick="qzhiding(this);">取消置顶
+                                            </button>
+                                            <button style="float: right;" class="btn" iddd="{{ topic.id }}"
+                                                    onclick="zhiding(this);">置顶
+                                            </button>
                                         </td>
                                     </tr>
                                 {% endfor %}
@@ -168,7 +180,6 @@
 <script>
     function deletet(ths) {
         var tid = $(ths).attr("iddd");
-        alert(tid);
         $.ajax({
             url: window.location.href,
             type: "POST",
@@ -186,7 +197,51 @@
                 else window.location.href="/admin-home";
             }
         });
+    };
+
+    function zhiding(ths) {
+        var tid = $(ths).attr("iddd");
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {
+                'type': 'zhiding',
+                't_id': tid
+            },
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href="/admin-home";
+            }
+        });
+    };
+
+    function qzhiding(ths) {
+        var tid = $(ths).attr("iddd");
+        $.ajax({
+            url: window.location.href,
+            type: "POST",
+            data: {
+                'type': 'qzhiding',
+                't_id': tid
+            },
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+            },
+            success: function (data) {
+                // data是服务器端返回的字符串
+                var dic = JSON.parse(data)
+                if (!dic.status) alert(JSON.parse(data).msg);
+                else window.location.href="/admin-home";
+            }
+        });
     }
+
+
 </script>
 
 </body>

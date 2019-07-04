@@ -64,35 +64,40 @@ def all_tie(request, kid, reply_limit, time_limit):
             for topic in topics:
                 # 查看每个帖子的回复数量
                 count = len(models.Reply.objects.filter(r_tid=topic.id))
-                if reply_limit == 0:
+                # print(count)
+                print(reply_limit)
+                if reply_limit == '0':
                     pass
-                elif reply_limit == 1:  # 1是大于100
+                elif reply_limit == '1':  # 1是大于100
+                    print('到1了')
                     if count < 100:
+                        print('到了')
                         continue
-                elif reply_limit == 2:  # 2是30-100
+                elif reply_limit == '2':  # 2是30-100
                     if count < 30 or count > 100:
                         continue
-                elif reply_limit == 3:  # 3是小于30
+                elif reply_limit == '3':  # 3是小于30
                     if count > 30:
                         continue
                 tmp.append(topic)
             topics = tmp
+            print(topics)
 
             # 筛选发布时间
             tmp = []
             for topic in topics:
-                if time_limit == 0: # 0是全部时间
+                if time_limit == '0': # 0是全部时间
                     pass
-                elif time_limit == 1:   # 1是1个月内
+                elif time_limit == '1':   # 1是1个月内
                     # 如果在限制之前，就筛掉
                     pass
-                elif time_limit == 2:   # 2是3个月内
+                elif time_limit == '2':   # 2是3个月内
                     # 如果在限制之前，就筛掉
                     pass
-                elif time_limit == 3:   # 3是6个月内
+                elif time_limit == '3':   # 3是6个月内
                     # 如果在限制之前，就筛掉
                     pass
-                elif time_limit == 4:   # 4是1年内
+                elif time_limit == '4':   # 4是1年内
                     # 如果在限制之前，就筛掉
                     pass
                 tmp.append(topic)
@@ -208,7 +213,10 @@ def single(request, tid):
     if request.method == 'GET':
         # 帖子内容
         # 时间类别作者，标题，正文，图片path
-        topic = models.Topic.objects.get(id=tid)
+        try:
+            topic = models.Topic.objects.get(id=tid)
+        except Exception as e:
+            return redirect('/home')
 
         t_time = topic.create_time
         t_kind = topic.t_kind
@@ -243,6 +251,7 @@ def single(request, tid):
                 'r_time': reply.r_time,
                 'r_content': reply.r_content,
                 'r_id': reply.id,
+                'r_photo': reply.r_photo,
             }
             reply_list.append(single_reply)
         response['reply_list'] = reply_list
@@ -367,15 +376,22 @@ def topic_manage(request):
     elif request.method == 'POST':
         p_type = request.POST.get('type')
         response = {'msg': '', 'status': False}
+        print(p_type)
         # 删除帖子
         if p_type == 'delete':
             t_id = request.POST.get('t_id')
             models.Topic.objects.filter(id=t_id).delete()
             response['status'] = True
-        # 是否推荐
-        if p_type == 'recommend':
+        # 置顶（推荐）
+        if p_type == 'zhiding':
+            print('置顶')
             t_id = request.POST.get('t_id')
             models.Topic.objects.filter(id=t_id).update(recommend=True)
+            response['status'] = True
+        # 取消置顶（推荐）
+        if p_type == 'qzhiding':
+            t_id = request.POST.get('t_id')
+            models.Topic.objects.filter(id=t_id).update(recommend=False)
             response['status'] = True
         return HttpResponse(json.dumps(response))
 
@@ -409,3 +425,19 @@ def kind_manage(request):
             response['status'] = True
 
         return HttpResponse(json.dumps(response))
+
+
+def single_an(request, aid):
+    if request.method == 'GET':
+        try:
+            an = models.Announcement.objects.get(id=aid)
+        except Exception as e:
+            return '/home'
+        a_title = an.a_title
+        a_content = an.a_content
+
+        response = {
+            'a_title': a_title,
+            'a_content': a_content,
+        }
+        return render(request, 'single-an.html', response)
