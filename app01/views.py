@@ -18,7 +18,9 @@ def home(request):
             dic = {'a_id': a.id, 'a_title': a.a_title}
             a_list.append(dic)
         # 把列表装进回复字典里
-        response['a_list'] = a_list
+        n = 10 if len(a_list) < 10 else len(a_list)
+
+        response['a_list'] = a_list[::-1][0:n-1]
 
         # 帖子推荐列表，推荐8个帖子，推荐8个要改
         recommends = models.Topic.objects.filter(recommend=True)

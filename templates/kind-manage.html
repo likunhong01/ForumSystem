@@ -3,11 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/images/favicon.png">
     <title>板块管理</title>
     <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
@@ -16,23 +11,10 @@
 </head>
 
 <body class="fix-header card-no-border">
-<div class="preloader">
-    <svg class="circular" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-    </svg>
-</div>
 <div id="main-wrapper">
     <header class="topbar">
         <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
             <div class="navbar-collapse">
-                <!--<ul class="navbar-nav mr-auto mt-md-0 ">
-                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                    <li class="nav-item hidden-sm-down">
-                        <form class="app-search p-l-20">
-                            <input type="text" class="form-control" placeholder="请输入..."> <a class="srh-btn"><i class="ti-search"></i></a>
-                        </form>
-                    </li>
-                </ul>-->
                 <ul class="navbar-nav my-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
@@ -43,9 +25,7 @@
         </nav>
     </header>
     <aside class="left-sidebar">
-        <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
-            <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li>
@@ -62,9 +42,7 @@
                     </li>
                 </ul>
             </nav>
-            <!-- End Sidebar navigation -->
         </div>
-        <!-- End Sidebar scroll-->
     </aside>
     <div class="page-wrapper">
         <div class="container-fluid">
@@ -96,9 +74,11 @@
                                                 <button style="float: right;" class="btn" iddd="{{ kind.id }}"
                                                         onclick="deletek(this);">删除
                                                 </button>
-                                                <a href="/all-{{ kind.id }}-0-0"> <button style="float: right;" class="btn">
-                                                    查看所有
-                                                </button></a>
+                                                <a href="/all-{{ kind.id }}-0-0">
+                                                    <button style="float: right;" class="btn">
+                                                        查看所有
+                                                    </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     {% endfor %}
@@ -109,17 +89,16 @@
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-
         </div>
         <div style="width: 100%">
             <div class="card">
                 <div class="card-block">
                     <form class="form-horizontal form-material">
-                        <div class="form-group">
-                            <label class="col-md-12">版块名</label>
+                        <span>添加板块</span>
+                        <div class="form-group" style="margin-top: 10px">
+                            <label class="col-md-12" style="font-size: 20px">版块名</label>
                             <div class="col-md-12">
-                                <input id="k_name" type="text" placeholder="" class="form-control form-control-line">
+                                <input id="k_name" type="text" placeholder="不超过16个字" class="form-control form-control-line">
                             </div>
                         </div>
 
@@ -133,32 +112,19 @@
             </div>
         </div>
     </div>
-    <!-- ============================================================== -->
-
     <footer class="footer text-center">
         © 2019 一个论坛
     </footer>
 </div>
 </div>
-<!-- All Jquery -->
-<!-- ============================================================== -->
 <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
 <script src="/static/assets/plugins/bootstrap/js/tether.min.js"></script>
 <script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<!-- slimscrollbar scrollbar JavaScript -->
 <script src="/static/js/jquery.slimscroll.js"></script>
-<!--Wave Effects -->
 <script src="/static/js/waves.js"></script>
-<!--Menu sidebar -->
 <script src="/static/js/sidebarmenu.js"></script>
-<!--stickey kit -->
 <script src="/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<!--Custom JavaScript -->
 <script src="/static/js/custom.min.js"></script>
-<!-- ============================================================== -->
-<!-- Style switcher -->
-<!-- ============================================================== -->
 <script src="/static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 
 
