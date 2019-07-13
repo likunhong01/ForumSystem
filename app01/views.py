@@ -6,6 +6,7 @@ import json
 
 # Create your views here.
 
+# 主页
 def home(request):
     if request.method == 'GET':
         response = {}
@@ -43,6 +44,7 @@ def home(request):
         return render(request, 'home.html', response)
 
 
+# 所有帖子
 def all_tie(request, kid, reply_limit, time_limit):
     uid = request.session.get('uid')
     if request.method == 'GET':
@@ -125,6 +127,7 @@ def all_tie(request, kid, reply_limit, time_limit):
         return render(request, 'all.html', {'topics': topics, 'kinds': kinds, 'uid': uid})
 
 
+# 登录
 def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
@@ -154,6 +157,7 @@ def login(request):
             return HttpResponse(json.dumps(response))
 
 
+# 注册
 def register(request):
     if request.method == 'POST':
         # 判断是否已有
@@ -172,6 +176,7 @@ def register(request):
             return redirect('/home')
 
 
+# 发布页
 def publish(request):
     if request.method == 'GET':
         kinds = models.Kind.objects.filter()
@@ -211,6 +216,7 @@ def publish(request):
         return redirect('/single/' + str(t_id))
 
 
+# 单个帖子页面
 def single(request, tid):
     if request.method == 'GET':
         # 帖子内容
@@ -299,6 +305,7 @@ def single(request, tid):
         return redirect('/single/' + tid)
 
 
+# 修改密码页面
 def edit_pwd(request):
     if request.method == 'GET':
         uid = request.session.get('uid')
@@ -429,6 +436,7 @@ def kind_manage(request):
         return HttpResponse(json.dumps(response))
 
 
+# 公告页面
 def single_an(request, aid):
     if request.method == 'GET':
         try:
