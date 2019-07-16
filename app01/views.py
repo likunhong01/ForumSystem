@@ -371,7 +371,7 @@ def announcement(request):
         return HttpResponse(json.dumps(response))
 
 
-# 标题，简介，时间，
+# 帖子管理：标题，简介，时间，
 def topic_manage(request):
     if not request.session.get('admin_uid'):
         return redirect('/my-admin')
