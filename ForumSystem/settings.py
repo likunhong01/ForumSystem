@@ -89,7 +89,7 @@ DATABASES = {
         'HOST': '',
         'NAME': 'forum_system',    #你的数据库名称
         'USER': 'root',   #你的数据库用户名
-        'PASSWORD': '35278479',
+        'PASSWORD': 'password',
         'PORT': '3306',
     }
 }
@@ -135,5 +135,5 @@ STATIC_URL = '/static/'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR, 'static'),
 )

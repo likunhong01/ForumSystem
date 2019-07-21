@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a73c0aef-8451-43dd-af24-d80db681a16c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForumSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ForumSystem/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +66,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ForumSystem/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="91" column="31" lean-forward="true" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/kind-manage.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,23 +114,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="459">
               <caret line="437" lean-forward="true" selection-start-line="437" selection-end-line="437" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="44">
-                <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -174,7 +171,6 @@
       <list>
         <option value="$PROJECT_DIR$/templates/gallery-single.htm" />
         <option value="$PROJECT_DIR$/app01/__init__.py" />
-        <option value="$PROJECT_DIR$/ForumSystem/settings.py" />
         <option value="$PROJECT_DIR$/app01/models.py" />
         <option value="$PROJECT_DIR$/templates/publish.html" />
         <option value="$PROJECT_DIR$/templates/all.html" />
@@ -193,6 +189,7 @@
         <option value="$PROJECT_DIR$/templates/announcement.html" />
         <option value="$PROJECT_DIR$/app01/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ForumSystem/settings.py" />
       </list>
     </option>
   </component>
@@ -327,12 +324,12 @@
       <workItem from="1562292356169" duration="1872000" />
       <workItem from="1562739615033" duration="1701000" />
       <workItem from="1562893700105" duration="1354000" />
-      <workItem from="1563009414371" duration="6560000" />
+      <workItem from="1563009414371" duration="7180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80157000" />
+    <option name="totallyTimeSpent" value="80777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForumSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3036">
-          <caret line="138" column="1" selection-start-line="135" selection-end-line="138" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin-home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2728">
@@ -578,9 +568,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="66">
+            <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app01/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
+        <state relative-caret-position="459">
           <caret line="437" lean-forward="true" selection-start-line="437" selection-end-line="437" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -588,13 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/ForumSystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="91" column="31" lean-forward="true" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
         </state>
       </provider>
     </entry>
